@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <link rel="stylesheet" href="form.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Registration</h1>
+        <form action="form.html" id="formregistration" onsubmit="return validation()" method="post">
+            <!-- Personal -->
+            <fieldset>
+                <legend>Personal Information</legend>
+                <!-- image -->
+                <div class="image style">
+                    <label for="image">Upload Your Image <sup>*</sup></label>
+                    <p class="text">Image format must be "jpeg", "png", or "jpg". Size should be less than 2MB.</p>
+                    <input type="file" name="imageUpload" id="image">
+                </div>
+                <!-- first -->
+                <div class="firstname style">
+                    <label for="FirstName">First Name: <sup>*</sup></label>
+                    <input type="text" name="Firstname" id="FirstName" placeholder="Enter Your First Name"
+                        pattern="[A-Za-z\s]+" required autocomplete="off">
+                </div>
+                <!-- last -->
+                <div class="lastname style">
+                    <label for="LastName">Last Name: <sup>*</sup></label>
+                    <input type="text" name="Lastname" id="LastName" placeholder="Enter Your Last Name"
+                        pattern="[A-Za-z\s]+" required autocomplete="off">
+                </div>
+                <!-- father -->
+                <div class="fathername style">
+                    <label for="FatherName">Father's Name: <sup>*</sup></label>
+                    <input type="text" name="Fathername" id="FatherName" placeholder="Enter Your Father's Name"
+                        pattern="[A-Za-z\s]+" required autocomplete="off">
+                </div>
+                <!-- surname -->
+                <div class="Surname style">
+                    <label for="SurName">Sur Name: <sup>*</sup></label>
+                    <input type="text" name="Surname" id="SurName" placeholder="Enter Your Name" required
+                        autocomplete="off">
+                </div>
+                <!-- religion -->
+                <div class="Religion style">
+                    <label for="religion">Religion: <sup>*</sup></label>
+                    <input type="text" name="religion" id="Religion" placeholder="Enter Your Religion" required
+                        autocomplete="off">
+                </div>
+                <!-- date of birth -->
+                <div class="dob style">
+                    <label for="dob">D.O.B: <sup>*</sup></label>
+                    <input type="date" name="dob" id="dob">
+                </div>
+                <!-- country -->
+                <div class="country style">
+                    <label for="country">Country: <sup>*</sup></label>
+                    <div class="list">
+                        <div class="icon"><img src="https://flagsapi.com/PK/flat/64.png"></div>
+                        <select name="country" id="country" required>
+                        </select>
+                    </div>
+                </div>
+                <!-- password -->
+                <div class="password style">
+                    <label for="password">Enter Your Password:</label>
+                    <input type="password" name="password" id="password" required autocomplete="off">
+                    <span class="togglePassword eye-icon"><i class="fas fa-eye"></i></span>
+                </div>
+                <div class="cpass style">
+                    <label for="cpassword">Confirm Password:</label>
+                    <input type="password" name="cpassword" id="cpassword" required autocomplete="off">
+                    <span class="togglePassword eye-icon"><i class="fas fa-eye"></i></span>
+                </div>
+                <span id="passAlert">Password must contain at least 1 uppercase, lowercase, special character, and a
+                    digit.</span>
+            </fieldset>
+            <!-- contact -->
+            <fieldset>
+                <legend>Contact Informtaion:</legend>
+                <!-- contact num -->
+                <div class="Contactnum style">
+                    <label for="ContactNum">Contact Number: <sup>*</sup></label>
+                    <input type="tel" name="Contactnum" id="ContactNum" placeholder="123-12345678" maxlength="12"
+                        required pattern="[0-9]{10,12}" required autocomplete="off">
+                </div>
+                <!-- email -->
+                <div class="Email style">
+                    <label for="email">Email: <sup>*</sup></label>
+                    <input type="email" name="Email" id="email" placeholder="Enter Your Email adress" required
+                        autocomplete="off">
+                </div>
+                <!-- home -->
+                <div class="Homeadress style">
+                    <label for="HomeAdress">Home Address: <sup>*</sup></label>
+                    <input type="text" name="Homeadress" id="HomeAdress" placeholder="Your location" required
+                        autocomplete="off">
+                </div>
+                <!-- cnic -->
+                <div class="CNIC style">
+                    <label for="cnic">CNIC: <sup>*</sup></label>
+                    <input type="number" name="CNIC" id="cnic" placeholder="Without dashes" required autocomplete="off">
+                </div>
+            </fieldset>
+            <!-- education -->
+            <fieldset>
+                <legend>Education</legend>
+                <!-- degree -->
+                <div class="degree style">
+                    <Label for="Degree">Degree: <sup>*</sup></Label>
+                    <input type="text" placeholder="Bachelor's" name="Degree" class="input" required autocomplete="off">
+                </div>
+                <!-- institute -->
+                <div class="institute style">
+                    <Label for="institute">Institute: <sup>*</sup></Label>
+                    <input type="text" placeholder="XYZ University" name="Institute" class="input" required
+                        autocomplete="off">
+                </div>
+                <!-- department -->
+                <div class="department style">
+                    <Label for="Department">Department: <sup>*</sup></Label>
+                    <input type="text" placeholder="Data science" name="Department" class="input" required
+                        autocomplete="off">
+                </div>
+                <!-- start date -->
+                <div class="sdate style">
+                    <Label for="Starting">From: <sup>*</sup></Label>
+                    <input type="date" class="From" name="start" class="input" required autocomplete="off">
+                </div>
+                <div class="edate style">
+                    <Label for="ending">Till: <sup>*</sup></Label>
+                    <input type="date" class="till" name="Till" class="input" required autocomplete="off">
+                </div>
+            </fieldset>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+    <script src="form.js"></script>
+</body>
+
+</html>

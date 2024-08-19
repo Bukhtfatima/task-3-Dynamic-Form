@@ -1,0 +1,202 @@
+:root {
+    --blue: rgb(60, 14, 145);
+    --purple: rgb(102, 8, 126);
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: linear-gradient(to top left, var(--blue), var(--purple) 70%);
+}
+
+h1 {
+    text-align: center;
+    color: #fff;
+    margin-bottom: 6vh;
+    width: 100%;
+    font-size: 2.5rem;
+}
+
+.container {
+    width: 80%;
+    transform: translateX(10%);
+    background-color: rgba(0, 0, 0, 0.466);
+    padding: 3vh 0;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+fieldset {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 5vh;
+    margin-bottom: 3vh;
+    padding: 3vh;
+    border: none;
+    border-top: 1px solid #ffffff41;
+}
+
+p, legend, label {
+    font-weight: bold;
+    color: white;
+}
+
+legend {
+    padding: 1vh;
+    margin-bottom: 3vh;
+}
+
+.style {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+input:not([type="radio"]), .list {
+    width: 50%;
+    height: 5vh;
+    padding: 0 1vh;
+    background-color: rgba(255, 255, 255, 0);
+    border: 1px solid rgb(187, 186, 186);
+    color: white;
+}
+
+select {
+    background-color: rgba(255, 255, 255, 0);
+    color: white;
+    width: 80%;
+    padding: 1vh 2vh;
+    cursor: pointer;
+}
+.icon {
+    width: 20%;
+    height: 100%;
+    border: none;
+}
+
+.icon img {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+.list {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    padding: 0;
+}
+option {
+    color: black;
+}
+
+input[type="file"] {
+    border: none;
+    background-color: rgba(255, 255, 255, 0);
+}
+
+input::-webkit-file-upload-button {
+    cursor: pointer;
+}
+
+input::placeholder {
+    color: rgb(187, 186, 186);
+}
+
+input:focus {
+    outline: none;
+}
+
+input:not([type="text"]):not([type="password"]):not([type="number"]) {
+    cursor: pointer;
+}
+
+button {
+    width: 60%;
+    padding: 2vh;
+    font-size: larger;
+    font-weight: bold;
+    background-color: rgba(241, 197, 0, 0.568);
+    border: none;
+    color: white;
+    cursor: pointer;
+    align-self: center;
+}
+
+button:hover {
+    transition: all 0.3s ease;
+    background-color: var(--blue);
+}
+
+sup,
+#passAlert,
+p.text {
+    color: rgb(253, 116, 116);
+}
+
+#passAlert {
+    font-size: smaller;
+    grid-column: 3/3;
+    text-align: right;
+}
+
+p.text {
+    font-size: 12px;
+    width: 25vh;
+    font-weight: lighter;
+    line-height: 3vh;
+}
+
+.eye-icon {
+    position: relative;
+    z-index: 9;
+    cursor: pointer;
+    color: white;
+}
+
+.password .eye-icon {
+    right: 4vh;
+}
+
+.cpass .eye-icon {
+    right: 5vh;
+}
+
+@media (max-width: 992px) {
+    fieldset {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    #passAlert {
+        grid-column: 2/3;
+    }
+}
+
+@media (max-width: 768px) {
+    fieldset {
+        grid-template-columns: 1fr;
+    }
+
+    #passAlert {
+        grid-column: 1/1;
+    }
+    .password .eye-icon {
+        right: 11vh;
+    }
+    
+    .cpass .eye-icon {
+        right: 12vh;
+    }
+}
+@media (max-width: 540px) {
+    .password .eye-icon {
+        right: 5vh;
+    }
+    
+    .cpass .eye-icon {
+        right: 5vh;
+    }
+}
+
